@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2.0,
+  "id": "groupedmetricstable",
+  "type": "widget",
+  "name": "Grouped metrics table",
+  "namespace": "GroupedMetricsTable",
+  "version": "1.0.0",
+  "author": "Chris Waldmeyer",
+  "url": "https://github.com/Basop/zabbix-grouped-metrics-table",
+  "description": "Native Zabbix grouped metrics table. Rows are item-tag values; columns retain Zabbix item pattern, tag, aggregation, time period and display options.",
+  "widget": {
+    "in": {
+      "hostids": {
+        "type": "_hostids"
+      },
+      "groupids": {
+        "type": "_hostgroupids"
+      }
+    }
+  },
+  "actions": {
+    "widget.groupedmetricstable.view": {
+      "class": "WidgetView"
+    },
+    "widget.groupedmetricstable.column.edit": {
+      "class": "ColumnEdit",
+      "view": "column.edit",
+      "layout": "layout.json"
+    }
+  }
+}
